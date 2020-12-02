@@ -1,0 +1,52 @@
+:root {
+  --coal: #151515;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@custom-media --sm (min-width: 480px);
+@custom-media --md (min-width: 768px);
+@custom-media --std (min-width: 960px);
+@custom-media --lg (min-width: 1140px);
+@custom-media --xl (min-width: 1440px);
+
+* {
+  box-sizing: border-box;
+  @media (--md) {
+    cursor: none;
+  }
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+  background: var(--coal);
+  backface-visibility: hidden;
+}
+
+picture,
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  position: relative;
+  color: var(--naga);
+  transition: color 0.25s ease;
+  &:focus,
+  &:hover {
+    color: white;
+    opacity: 1;
+  }
+}
